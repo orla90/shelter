@@ -1,0 +1,7 @@
+.layout-3-column {
+  @include columns($width: 25%, $justify: space-between);
+}
+
+.layout-5-column {
+  @include columns($width: 16.8%, $justify: space-evenly);
+}

@@ -1,0 +1,29 @@
+.not-only__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.not-only__content {
+  margin: 134px 42px 0 0;
+  width: 460px;
+}
+
+.not-only__img {
+  width: 698px;
+  height: 728px;
+}
+
+.not-only__title {
+  color: $color-white;
+  width: 310px;
+}
+
+.not-only__text {
+  @include font($size: 1.5rem, $height: 160%);
+  color: $color-light-text;
+  padding: 10px 0 0;
+}
+
+.not-only__button {
+  padding: 46px 0 0;
+}

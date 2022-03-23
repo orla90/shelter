@@ -1,0 +1,8 @@
+.main {
+  background: radial-gradient(
+      100% 215.42% at 0% 0%,
+      $color-start-gradient1 0%,
+      $color-start-gradient2 100%
+    ),
+    linear-gradient(0deg, $color-end-gradient, $color-end-gradient);
+}

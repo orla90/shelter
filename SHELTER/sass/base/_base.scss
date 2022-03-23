@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "Arial";
+  src: url("Arial-ItalicMT.eot");
+  src: local("Arial Italic"), local("Arial-ItalicMT"),
+    url("Arial-ItalicMT.eot?#iefix") format("embedded-opentype"),
+    url("Arial-ItalicMT.woff") format("woff"),
+    url("Arial-ItalicMT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("ArialMT.eot");
+  src: local("Arial"), local("ArialMT"),
+    url("ArialMT.eot?#iefix") format("embedded-opentype"),
+    url("ArialMT.woff") format("woff"), url("ArialMT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("Georgia.eot");
+  src: local("Georgia"), url("Georgia.eot?#iefix") format("embedded-opentype"),
+    url("Georgia.woff") format("woff"), url("Georgia.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  @extend %font-prim;
+  @include font($size: 1.5rem);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+h1 {
+  @extend %font-add;
+  @include font($size: 4.4rem, $height: 130%);
+}
+
+h2 {
+  @extend %font-add;
+  @include font($size: 3.5rem, $height: 130%, $space: 0.06em);
+}
+
+h3 {
+  @extend %font-add;
+  @include font($size: 3.2rem, $height: 110%, $space: 0.06em);
+}
+
+h4 {
+  @extend %font-add;
+  @include font($size: 2rem, $height: 115%, $space: 0.06em);
+}
+
+h5 {
+  @extend %font-add;
+  @include font($size: 1.5rem, $height: 110%, $space: 0.06em);
+}

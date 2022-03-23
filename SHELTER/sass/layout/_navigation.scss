@@ -1,0 +1,19 @@
+.navigation {
+  display: flex;
+  width: 443px;
+  @include font($size: 1.5rem, $height: 160%);
+}
+
+.navigation__link {
+  list-style: none;
+  padding: 0 0 0 35px;
+  cursor: pointer;
+  &:first-child {
+    padding: 0;
+  }
+  @extend %transition;
+  color: $color-light-text;
+  &:hover {
+    color: $color-light-cards;
+  }
+}
