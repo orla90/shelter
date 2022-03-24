@@ -337,7 +337,15 @@ template {
   display: none;
 }
 
-.navigation__link {
+section, main, header, footer, article {
+  display: block;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+.navigation__link, .our-friends__arrow_right:hover, .our-friends__arrow_left:hover, .card:hover .card__image, .button, a:hover .logo__description, a:hover .logo__main, .logo {
   transition: all 0.3s ease-out;
 }
 
@@ -372,6 +380,7 @@ body {
 }
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -387,8 +396,11 @@ body {
   padding: 0;
 }
 
-a:link {
+a:active,
+a:hover,
+a {
   text-decoration: none;
+  color: inherit;
 }
 
 h1 {
@@ -439,6 +451,9 @@ h5 {
   display: block;
   color: #f1cdb3;
 }
+a:hover .logo__main {
+  color: #fddcc4;
+}
 
 .logo__description {
   display: block;
@@ -450,6 +465,9 @@ h5 {
   letter-spacing: 0.1em;
   padding-top: 10px;
   text-align: center;
+}
+a:hover .logo__description {
+  color: #ffffff;
 }
 
 .help-icon {
@@ -476,6 +494,7 @@ h5 {
 }
 .button:hover {
   background-color: #fddcc4;
+  border: #fddcc4;
 }
 
 .not-only__wrapper {
@@ -566,6 +585,9 @@ h5 {
   flex-direction: column;
   align-items: center;
 }
+.card:hover .card__image {
+  transform: scale(1.2) translate(0%, -5%);
+}
 
 .card__image {
   width: 270px;
@@ -595,21 +617,29 @@ h5 {
 }
 
 .our-friends__arrow_left {
-  background: url(../../assets/icons/button_arrow_left.png);
+  background: url(../../assets/icons/button_arrow_left.svg);
   background-repeat: no-repeat;
   display: block;
   width: 52px;
   height: 52px;
   background-size: contain;
 }
+.our-friends__arrow_left:hover {
+  cursor: pointer;
+  background: url(../../assets/icons/button_arrow_left_hover.svg);
+}
 
 .our-friends__arrow_right {
-  background: url(../../assets/icons/button_arrow_right.png);
+  background: url(../../assets/icons/button_arrow_right.svg);
   background-repeat: no-repeat;
   display: block;
   width: 52px;
   height: 52px;
   background-size: contain;
+}
+.our-friends__arrow_right:hover {
+  cursor: pointer;
+  background: url(../../assets/icons/button_arrow_right_hover.svg);
 }
 
 .help {
@@ -812,12 +842,33 @@ h5 {
   padding: 0 0 0 35px;
   cursor: pointer;
   color: #cdcdcd;
+  text-decoration: underline transparent;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
 }
 .navigation__link:first-child {
   padding: 0;
 }
 .navigation__link:hover {
   color: #fafafa;
+  text-decoration: underline;
+  text-decoration-color: #f1cdb3;
+  text-decoration-thickness: 3px;
+}
+
+.navigation__link_active {
+  color: #fafafa;
+  text-decoration: underline;
+  text-decoration-color: #f1cdb3;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+
+a:active,
+a:hover,
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .footer__wrapper {

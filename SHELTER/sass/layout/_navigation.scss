@@ -13,7 +13,28 @@
   }
   @extend %transition;
   color: $color-light-text;
+  text-decoration: underline transparent;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
   &:hover {
     color: $color-light-cards;
+    text-decoration: underline;
+    text-decoration-color: $color-primary;
+    text-decoration-thickness: 3px;
   }
+}
+
+.navigation__link_active {
+  color: $color-light-cards;
+  text-decoration: underline;
+  text-decoration-color: $color-primary;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+
+a:active,
+a:hover,
+a {
+  text-decoration: none;
+  color: inherit;
 }

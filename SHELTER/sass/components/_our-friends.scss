@@ -16,6 +16,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  &:hover .card__image {
+    transform: scale(1.2) translate(0%, -5%);
+    @extend %transition;
+  }
 }
 
 .card__image {
@@ -46,11 +50,21 @@
 }
 
 .our-friends__arrow_left {
-  background: url(../../assets/icons/button_arrow_left.png);
+  background: url(../../assets/icons/button_arrow_left.svg);
   @include background($width: 52px, $height: 52px);
+  &:hover {
+    cursor: pointer;
+    @extend %transition;
+    background: url(../../assets/icons/button_arrow_left_hover.svg);
+  }
 }
 
 .our-friends__arrow_right {
-  background: url(../../assets/icons/button_arrow_right.png);
+  background: url(../../assets/icons/button_arrow_right.svg);
   @include background($width: 52px, $height: 52px);
+  &:hover {
+    cursor: pointer;
+    @extend %transition;
+    background: url(../../assets/icons/button_arrow_right_hover.svg);
+  }
 }
