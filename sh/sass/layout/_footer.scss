@@ -1,0 +1,56 @@
+.footer__wrapper {
+  padding: 40px 0 0;
+}
+
+.footer__title {
+  color: $color-white;
+}
+
+.footer__item {
+  padding: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 234px;
+}
+
+.footer__item_center {
+  padding-right: 22px;
+}
+
+.contacts-item {
+  display: flex;
+  align-items: center;
+}
+
+.footer__ico {
+  padding: 0 20px 0 0;
+}
+
+.footer__ico_email {
+  background: url(../../assets/icons/mail.svg);
+  @include background($width: 40px, $height: 26px);
+}
+
+.footer__ico_phone {
+  background: url(../../assets/icons/phone.svg);
+  @include background($width: 40px, $height: 32px);
+}
+
+.footer__ico_address {
+  background: url(../../assets/icons/pin.svg);
+  @include background($width: 22px, $height: 32px);
+}
+
+.footer__info {
+  color: $color-primary;
+}
+
+.footer__info_center {
+  padding-left: 10px;
+}
+
+.footer__img {
+  width: 300px;
+  height: 310px;
+}

@@ -1,0 +1,21 @@
+.button {
+  @extend %font-add;
+  @include font($size: 1.7rem, $height: 130%, $space: 0.06em);
+  @extend %transition;
+  color: $color-dark;
+  padding: 13px 43px;
+  border-radius: 100px;
+  cursor: pointer;
+  border: none;
+  &_bordered {
+    background-color: $color-light-cards;
+    border: 2px solid $color-primary;
+  }
+  &_colored {
+    background-color: $color-primary;
+  }
+  &:hover {
+    background-color: $color-primary-light;
+    border: $color-primary-light;
+  }
+}

@@ -1,0 +1,37 @@
+.header {
+  padding: 60px 0;
+}
+
+.logo__main {
+  color: $color-primary;
+  a:hover & {
+    color: $color-primary-light;
+  }
+}
+
+.logo__description {
+  color: $color-light-text;
+  a:hover & {
+    color: $color-white;
+  }
+}
+
+.navigation__link {
+  color: $color-light-text;
+  &:hover {
+    color: $color-light-cards;
+  }
+}
+
+.navigation__link_active {
+  color: $color-light-cards;
+}
+
+.main {
+  background: radial-gradient(
+      100% 215.42% at 0% 0%,
+      $color-start-gradient1 0%,
+      $color-start-gradient2 100%
+    ),
+    linear-gradient(0deg, $color-end-gradient, $color-end-gradient);
+}
