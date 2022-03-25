@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "main": "sass --watch sass/main.scss pages/main/style.css",
+    "pets": "sass --watch sass/pets.scss pages/pets/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

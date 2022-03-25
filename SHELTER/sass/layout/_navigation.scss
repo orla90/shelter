@@ -12,7 +12,6 @@
     padding: 0;
   }
   @extend %transition;
-  color: $color-light-text;
   text-decoration: underline transparent;
   text-decoration-thickness: 3px;
   text-underline-offset: 4px;
@@ -25,7 +24,6 @@
 }
 
 .navigation__link_active {
-  color: $color-light-cards;
   text-decoration: underline;
   text-decoration-color: $color-primary;
   text-decoration-thickness: 3px;

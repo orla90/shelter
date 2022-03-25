@@ -5,21 +5,17 @@
 
 .logo__main {
   display: block;
-  color: $color-primary;
   a:hover & {
-    color: $color-primary-light;
     @extend %transition;
   }
 }
 
 .logo__description {
   display: block;
-  color: $color-light-text;
   @include font($size: 1.3rem, $height: 15px, $space: 0.1em);
   padding-top: 10px;
   text-align: center;
   a:hover & {
-    color: $color-white;
     @extend %transition;
   }
 }

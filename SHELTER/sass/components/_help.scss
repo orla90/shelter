@@ -2,23 +2,16 @@
   background-color: $color-white;
 }
 
-.help__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 80px 0 100px;
-}
-
 .help__title {
   width: 310px;
   margin: 0 auto;
   text-align: center;
-  padding: 0 0 5px 0;
+  padding: 80px 0 60px 0;
 }
 
 .help-item {
   width: 165px;
-  padding: 55px 0 0;
+  padding: 0 0 55px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,7 +48,7 @@
 }
 
 .help__icon_medicines {
-  background: url(../../assets/icons/vitamins.svg);
+  background: url(../../assets/icons/medicines.svg);
   @include background($width: 60px, $height: 60px);
 }
 
@@ -71,4 +64,9 @@
 
 .help__text {
   padding: 30px 0 0;
+}
+
+.layout-5-column_help {
+  padding-bottom: 46px;
+  margin: 0 auto;
 }
