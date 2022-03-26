@@ -30,10 +30,12 @@
 
 html {
   font-size: 10px;
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
+  overflow-x: hidden;
   @extend %font-prim;
   @include font($size: 1.5rem);
   color: $color-dark-title;
@@ -54,11 +56,17 @@ a {
 h1 {
   @extend %font-add;
   @include font($size: 4.4rem, $height: 130%);
+  @include media-mobile-small {
+    @include font($size: 2.5rem, $height: 130%);
+  }
 }
 
 h2 {
   @extend %font-add;
-  @include font($size: 3.5rem, $height: 130%, $space: 0.06em);
+  @include font($size: 3.5rem, $height: 129%, $space: 0.06em);
+  @include media-mobile-small {
+    @include font($size: 2.5rem, $height: 129%);
+  }
 }
 
 h3 {
@@ -69,6 +77,9 @@ h3 {
 h4 {
   @extend %font-add;
   @include font($size: 2rem, $height: 115%, $space: 0.06em);
+  @include media-mobile-small {
+    @include font($size: 1.5rem, $height: 110%);
+  }
 }
 
 h5 {

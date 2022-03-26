@@ -44,6 +44,7 @@
 
 .footer__info {
   color: $color-primary;
+  @include font($size: 2rem, $height: 115%, $space: 0.06em);
 }
 
 .footer__info_center {

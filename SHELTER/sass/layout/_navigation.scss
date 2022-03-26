@@ -1,7 +1,14 @@
+.header__navigation {
+  display: flex;
+}
+
 .navigation {
   display: flex;
   width: 443px;
   @include font($size: 1.5rem, $height: 160%);
+  @media (max-width: ($tablet-width - 1)) {
+    display: none;
+  }
 }
 
 .navigation__link {

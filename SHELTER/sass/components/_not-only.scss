@@ -1,16 +1,28 @@
 .not-only__wrapper {
   display: flex;
   justify-content: space-between;
+  @include media-desktop {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .not-only__content {
   margin: 134px 42px 0 0;
   width: 460px;
+  @include media-desktop {
+    margin: 0;
+  }
 }
 
 .not-only__img {
   width: 698px;
   height: 728px;
+  @include media-desktop {
+    width: 569px;
+    height: 593px;
+    padding-left: 19%;
+  }
 }
 
 .not-only__title {
@@ -21,9 +33,16 @@
 .not-only__text {
   @include font($size: 1.5rem, $height: 160%);
   color: $color-light-text;
-  padding: 10px 0 0;
+  padding: 12px 0 0;
 }
 
 .not-only__button {
-  padding: 46px 0 0;
+  padding: 42px 0 0;
+  @include media-desktop {
+    width: 207px;
+    height: 52px;
+    white-space: nowrap;
+    margin: 0 auto;
+    padding-bottom: 100px;
+  }
 }
