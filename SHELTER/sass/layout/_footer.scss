@@ -26,10 +26,17 @@
   @include media-desktop {
     padding: 0;
   }
+  @include media-big-mobile {
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .footer__item_begin {
   width: 278px;
+  @include media-big-mobile {
+    height: 208px;
+  }
 }
 
 .footer__item_center {
@@ -38,10 +45,25 @@
   @include media-desktop {
     padding: 0;
   }
+  @include media-big-mobile {
+    height: 222px;
+    padding-top: 39px;
+  }
 }
 
 .footer__info_center {
   width: 302px;
+  @include media-big-mobile {
+    width: 258px;
+    text-align: left;
+  }
+}
+
+.footer__info_center2 {
+  @include media-big-mobile {
+    width: 258px;
+    text-align: left;
+  }
 }
 
 .contacts-item {
@@ -79,5 +101,10 @@
   height: 310px;
   @include media-desktop {
     padding-top: 64px;
+  }
+  @include media-big-mobile {
+    width: 260px;
+    height: 269px;
+    padding-top: 40px;
   }
 }

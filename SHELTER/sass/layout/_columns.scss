@@ -1,5 +1,8 @@
 .layout-3-column {
   @include columns($width: 25%, $justify: space-between);
+  @include media-big-mobile {
+    @include columns($width: 30%, $justify: center);
+  }
 }
 
 .footer__layout-3-column {
@@ -19,5 +22,10 @@
     @include columns($width: 26.7%, $justify: space-between);
     width: 630px;
     column-gap: 6rem;
+  }
+  @include media-big-mobile {
+    @include columns($width: 130px, $justify: space-between);
+    width: 290px;
+    column-gap: 0;
   }
 }

@@ -17,6 +17,13 @@
       background: url(../../assets/icons/paginator/button_arrow_right_hover.svg);
     }
   }
+
+  .our-friends-main__slider {
+    display: none;
+    @include media-big-mobile {
+      display: flex;
+    }
+  }
   
   .our-friends__slider {
     display: flex;
@@ -73,4 +80,17 @@
       @extend %transition;
       background: url(../../assets/icons/paginator/button_paginator_active2_hover.svg);
     }
+  }
+
+  .our-friends__carousel_shown {
+    @include media-big-mobile {
+      display: none;
+    }
+  }
+
+  .our-friends-main__slider {
+    width: 185px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between;
   }

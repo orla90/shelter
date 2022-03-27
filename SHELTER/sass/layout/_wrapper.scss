@@ -4,4 +4,7 @@
   @include media-desktop {
     padding: 0 30px;
   }
+  @include media-big-mobile {
+    padding: 0 10px;
+  }
 }

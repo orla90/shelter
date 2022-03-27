@@ -5,6 +5,7 @@
   height: 22px;
   @include media-big-mobile {
     display: inline-block;
+    margin-right: 43px;
   }
 
   &::before {
@@ -21,7 +22,7 @@
 
 .hamburger__line {
   @extend %hamburger-line;
-  top: calc(50% - 1.5px);
+  top: calc(50% - 1px);
 }
 
 %hamburger-line {
@@ -29,6 +30,6 @@
   display: inline-block;
   position: absolute;
   background: $color-primary;
-  height: 3px;
+  height: 2px;
   width: 100%;
 }

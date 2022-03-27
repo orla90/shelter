@@ -13,6 +13,12 @@
   @include media-desktop {
     margin: 0;
   }
+  @include media-big-mobile {
+    width: 300px;
+    text-align: center;
+    margin: 0;
+    padding: 30px 0 0;
+  }
 }
 
 .not-only__img {
@@ -23,17 +29,29 @@
     height: 593px;
     padding-left: 19%;
   }
+  @include media-big-mobile {
+    width: 87%;
+    height: 87%;
+    padding-left: 13%;
+  }
 }
 
 .not-only__title {
   color: $color-white;
   width: 310px;
+  @include media-big-mobile {
+    width: 228px;
+    margin: 0 auto;
+  }
 }
 
 .not-only__text {
   @include font($size: 1.5rem, $height: 160%);
   color: $color-light-text;
   padding: 12px 0 0;
+  @include media-big-mobile {
+    padding: 42px 0 0;
+  }
 }
 
 .not-only__button {
@@ -44,5 +62,8 @@
     white-space: nowrap;
     margin: 0 auto;
     padding-bottom: 100px;
+  }
+  @include media-big-mobile {
+    padding-bottom: 105px;
   }
 }

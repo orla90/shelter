@@ -54,4 +54,7 @@
   margin: 0 auto;
   text-align: center;
   padding: 60px 0 100px;
+  @include media-big-mobile {
+    padding: 42px 0 42px;
+  }
 }

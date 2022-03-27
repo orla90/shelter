@@ -5,6 +5,7 @@
 .navigation {
   display: flex;
   width: 443px;
+  padding-bottom: 3px;
   @include font($size: 1.5rem, $height: 160%);
   @media (max-width: ($tablet-width - 1)) {
     display: none;

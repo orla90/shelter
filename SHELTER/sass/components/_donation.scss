@@ -20,6 +20,11 @@
   @include media-desktop {
     padding: 60px 0 100px;
   }
+  @include media-big-mobile {
+    width: 260px;
+    height: 135.2px;
+    padding: 42px 0;
+  }
 }
 
 .donation__content {
@@ -31,10 +36,21 @@
   @include media-desktop {
     padding-top: 80px;
   }
+  @include media-big-mobile {
+    width: 225px;
+    padding-top: 42px;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 
 .donation__subtitle {
   padding: 20px 0 20px;
+  @include media-big-mobile {
+    text-align: center;
+    padding-right: 4px;
+    margin: 0 auto;
+  }
 }
 
 .credit-card {
@@ -45,6 +61,11 @@
   width: 349px;
   height: 43px;
   border-radius: 9px;
+  @include media-big-mobile {
+    padding-right: 4px;
+    width: 281px;
+    margin: 0 auto;
+  }
 }
 
 .credit-card__ico {
@@ -56,4 +77,10 @@
   padding: 20px 0 0;
   @include font($size: 1.2rem, $height: 150%, $style: italic);
   color: $color-gray-text;
+  @include media-big-mobile {
+    width: 281px;
+    margin: 0 auto;
+    text-align: justify;
+    align-items: center;
+  }
 }
