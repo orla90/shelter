@@ -47,6 +47,13 @@
   width: 400px;
   margin: 0 auto;
   text-align: center;
+  padding: 80px 0 60px;
+  @include media-big-mobile {
+    padding: 42px 0 40px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .our-friends__button {

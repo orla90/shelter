@@ -532,7 +532,6 @@ h5 {
   content: "";
   display: inline-block;
   position: absolute;
-  background: #f1cdb3;
   height: 2px;
   width: 100%;
 }
@@ -680,15 +679,6 @@ h5 {
   background: url(../../assets/icons/paginator/button_arrow_right_hover.svg);
 }
 
-.our-friends-main__slider {
-  display: none;
-}
-@media (max-width: 767px) {
-  .our-friends-main__slider {
-    display: flex;
-  }
-}
-
 .our-friends__slider {
   display: flex;
   width: 340px;
@@ -699,6 +689,12 @@ h5 {
 @media (max-width: 1279px) {
   .our-friends__slider {
     padding: 10px 0 76px;
+  }
+}
+@media (max-width: 767px) {
+  .our-friends__slider {
+    width: 300px;
+    padding: 12px 0 42px;
   }
 }
 
@@ -772,10 +768,16 @@ h5 {
 }
 
 .our-friends-main__slider {
-  width: 185px;
-  margin: 20px auto 0;
-  display: flex;
-  justify-content: space-between;
+  display: none;
+}
+@media (max-width: 767px) {
+  .our-friends-main__slider {
+    display: flex;
+    width: 185px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .about {
@@ -911,6 +913,15 @@ h5 {
   width: 400px;
   margin: 0 auto;
   text-align: center;
+  padding: 80px 0 60px;
+}
+@media (max-width: 767px) {
+  .our-friends__title {
+    padding: 42px 0 40px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .our-friends__button {
@@ -1525,6 +1536,16 @@ a {
 .layout-4-column > * {
   flex-basis: 20%;
 }
+@media (max-width: 767px) {
+  .layout-4-column {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .layout-4-column > * {
+    flex-basis: 30%;
+  }
+}
 
 .layout-5-column {
   display: flex;
@@ -1584,6 +1605,17 @@ a:hover .logo__description {
   color: #fafafa;
 }
 
+.hamburger::before {
+  background: #f1cdb3;
+}
+.hamburger::after {
+  background: #f1cdb3;
+}
+
+.hamburger__line {
+  background: #f1cdb3;
+}
+
 .main {
   background: radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), linear-gradient(0deg, #211f20, #211f20);
 }
@@ -1598,18 +1630,6 @@ a:hover .logo__description {
 @media (max-width: 1279px) {
   .our-friends__layout {
     width: 580px;
-  }
-}
-
-.our-friends__title {
-  padding: 80px 0 60px;
-}
-@media (max-width: 767px) {
-  .our-friends__title {
-    width: 300px;
-    padding: 42px 0 40px;
-    margin: 0 auto;
-    text-align: center;
   }
 }
 

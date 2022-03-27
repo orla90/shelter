@@ -14,6 +14,9 @@
 
 .layout-4-column {
   @include columns($width: 20%, $justify: space-between);
+  @include media-big-mobile {
+    @include columns($width: 30%, $justify: center);
+  }
 }
 
 .layout-5-column {

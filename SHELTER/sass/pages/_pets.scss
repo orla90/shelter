@@ -27,14 +27,30 @@
   color: $color-dark;
 }
 
+.hamburger {
+  &::before {
+    background: $color-black;
+  }
+  &::after {
+    background: $color-black;
+  }
+}
+
+.hamburger__line {
+  background: $color-black;
+}
+
 .our-friends__carousel {
 justify-content: center;
 }
 
 .our-friends__title {
-  padding: 80px 0 60px;
+  // padding: 80px 0 60px;
   @include media-desktop {
     padding: 80px 0 30px;
+  }
+  @include media-big-mobile {
+        padding: 42px 0 40px;
   }
 }
 
@@ -50,6 +66,24 @@ justify-content: center;
 
 .card_freddie {
   @include media-desktop {
+    display: none;
+  }
+}
+
+.card_sophia {
+  @include media-big-mobile {
+    display: none;
+  }
+}
+
+.card_timmy {
+  @include media-big-mobile {
+    display: none;
+  }
+}
+
+.card_charly {
+  @include media-big-mobile {
     display: none;
   }
 }

@@ -23,6 +23,19 @@
   color: $color-light-cards;
 }
 
+.hamburger {
+  &::before {
+    background: $color-primary;
+  }
+  &::after {
+    background: $color-primary;
+  }
+}
+
+.hamburger__line {
+  background: $color-primary;
+}
+
 .main {
   background: radial-gradient(
       100% 215.42% at 0% 0%,
@@ -43,15 +56,12 @@
   }
 }
 
-.our-friends__title {
-  padding: 80px 0 60px;
-  @include media-big-mobile {
-    width: 300px;
-    padding: 42px 0 40px;
-    margin: 0 auto;
-    text-align: center;
-  }
-}
+// .our-friends__title {
+//   padding: 80px 0 60px;
+//   @include media-big-mobile {
+//     padding: 42px 0 40px;
+//   }
+// }
 
 .card_woody {
   @include media-desktop {
