@@ -10,11 +10,13 @@
 }
 
 .help-item {
-  width: 165px;
   padding: 0 0 55px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include media-desktop {
+    width: 170px;
+  }
 }
 
 .help__icon_food {
@@ -69,4 +71,10 @@
 .layout-5-column_help {
   padding-bottom: 45px;
   margin: 0 auto;
+  column-gap: 12rem;
+  // @include media-desktop {
+  //   @include columns($width: 25%, $justify: space-between);
+  //   width: 630px;
+  //   // column-gap: 6rem;
+  // }
 }

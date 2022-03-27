@@ -9,11 +9,17 @@
   justify-content: space-between;
   padding: 80px 0 100px;
   width: 71.48%;
+  @include media-desktop {
+    flex-direction: column;
+  }
 }
 
 .donation__img {
   width: 505px;
   height: 261px;
+  @include media-desktop {
+    padding: 60px 0 100px;
+  }
 }
 
 .donation__content {
@@ -22,6 +28,9 @@
 
 .donation__title {
   width: 300px;
+  @include media-desktop {
+    padding-top: 80px;
+  }
 }
 
 .donation__subtitle {

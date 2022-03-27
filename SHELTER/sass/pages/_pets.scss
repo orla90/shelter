@@ -16,10 +16,6 @@
   }
 }
 
-.card {
-  margin: 0 0 30px;
-}
-
 .navigation__link {
   color: $color-dark-title;
   &:hover {
@@ -29,6 +25,30 @@
 
 .navigation__link_active {
   color: $color-dark;
+}
+
+.our-friends__carousel {
+justify-content: center;
+}
+
+.our-friends__title {
+  padding: 80px 0 30px;
+}
+
+.card {
+  margin: 0 0 30px;
+}
+
+.card_scarlett {
+  @include media-desktop {
+    display: none;
+  }
+}
+
+.card_freddie {
+  @include media-desktop {
+    display: none;
+  }
 }
 
 .footer {

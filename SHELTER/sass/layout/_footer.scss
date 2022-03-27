@@ -1,9 +1,20 @@
 .footer__wrapper {
   padding: 40px 0 0;
+  @include media-desktop {
+    padding: 30px 0 0;
+  }
 }
 
 .footer__title {
   color: $color-white;
+}
+
+.footer__title_contacts {
+  width: 279px;
+}
+
+.footer__title_address {
+  width: 270px;
 }
 
 .footer__item {
@@ -12,10 +23,25 @@
   flex-direction: column;
   justify-content: space-between;
   height: 234px;
+  @include media-desktop {
+    padding: 0;
+  }
+}
+
+.footer__item_begin {
+  width: 278px;
 }
 
 .footer__item_center {
+  width: 302px;
   padding-right: 22px;
+  @include media-desktop {
+    padding: 0;
+  }
+}
+
+.footer__info_center {
+  width: 302px;
 }
 
 .contacts-item {
@@ -44,14 +70,14 @@
 
 .footer__info {
   color: $color-primary;
+  @extend %font-add;
   @include font($size: 2rem, $height: 115%, $space: 0.06em);
-}
-
-.footer__info_center {
-  padding-left: 10px;
 }
 
 .footer__img {
   width: 300px;
   height: 310px;
+  @include media-desktop {
+    padding-top: 64px;
+  }
 }

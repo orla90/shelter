@@ -8,11 +8,17 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
+  @include media-desktop {
+    flex-direction: column;
+  }
 }
 
 .about__img {
   width: 300px;
   height: 408px;
+  @include media-desktop {
+    padding-top: 80px;
+  }
 }
 
 .about__content {
