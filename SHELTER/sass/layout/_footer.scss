@@ -1,7 +1,12 @@
 .footer__wrapper {
   padding: 40px 0 0;
   @include media-desktop {
+    width: 708px;
     padding: 30px 0 0;
+  }
+  @include media-big-mobile {
+    padding: 30px 0 0;
+    width: 300px;
   }
 }
 
@@ -52,9 +57,8 @@
 }
 
 .footer__info_center {
-  width: 302px;
+  width: 258px;
   @include media-big-mobile {
-    width: 258px;
     text-align: left;
   }
 }
@@ -94,6 +98,15 @@
   color: $color-primary;
   @extend %font-add;
   @include font($size: 2rem, $height: 115%, $space: 0.06em);
+  @extend %transition;
+  &:hover {
+    color: $color-primary-light;
+  }
+}
+
+.footer__image {
+  display: flex;
+  justify-content: center;
 }
 
 .footer__img {

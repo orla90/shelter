@@ -7,6 +7,10 @@
     @include columns($width: 45%, $justify: center);
     width: 580px;
   }
+  @include media-big-mobile {
+    width: 300px;
+    margin: 0 auto;
+  }
 }
 
 .our-friends__carousel {

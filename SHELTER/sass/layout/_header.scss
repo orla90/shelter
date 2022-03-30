@@ -9,4 +9,58 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &.open {
+    @include media-big-mobile {
+      position: absolute;
+      display: block;
+      padding: 0;
+      top: 0;
+      right: 0px;
+      z-index: 1;
+      width: 320px;
+      height: 100vh;
+      @include font($size: 3.2rem, $height: 160%);
+    }
+    .logo-wrapper {
+      @include media-big-mobile {
+        width: 255px;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 0 0 10px;
+        > .hamburger {
+          margin: 0;
+          > * {
+            display: block;
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+    .header__navigation {
+      @include media-big-mobile {
+        margin-top: 158px;
+      }
+      & .navigation {
+        @include media-big-mobile {
+          margin-top: 150px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 243px;
+          height: 327px;
+          text-align: center;
+          @include font($size: 3.2rem, $height: 160%);
+          margin: 0 auto;
+          > * {
+            padding: 0;
+          }
+          > li > a.navigation__link_active {
+            text-underline-offset: 12px;
+          }
+        }
+      }
+    }
+  }
 }

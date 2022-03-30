@@ -8,14 +8,17 @@
 .footer__layout-3-column {
   @include columns($width: 25%, $justify: space-between);
   @include media-desktop {
-    @include columns($width: 30%, $justify: space-evenly);
+    @include columns($width: 42.7%, $justify: space-evenly);
+  }
+  @include media-big-mobile {
+    @include columns($width: 90%, $justify: center);
   }
 }
 
 .layout-4-column {
   @include columns($width: 20%, $justify: space-between);
   @include media-big-mobile {
-    @include columns($width: 30%, $justify: center);
+    @include columns($width: 51%, $justify: center);
   }
 }
 

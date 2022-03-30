@@ -23,15 +23,15 @@
 
 .not-only__img {
   width: 698px;
-  height: 728px;
+  height: 729px;
   @include media-desktop {
     width: 569px;
     height: 593px;
     padding-left: 19%;
   }
   @include media-big-mobile {
-    width: 87%;
-    height: 87%;
+    width: 260px;
+    height: 271.77px;
     padding-left: 13%;
   }
 }
