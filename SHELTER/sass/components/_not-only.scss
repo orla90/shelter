@@ -8,31 +8,30 @@
 }
 
 .not-only__content {
-  margin: 134px 42px 0 0;
+  margin: 163px 42px 0 0;
   width: 460px;
   @include media-desktop {
     margin: 0;
+    padding: 30px 0 0;
   }
   @include media-big-mobile {
     width: 300px;
     text-align: center;
-    margin: 0;
-    padding: 30px 0 0;
   }
 }
 
 .not-only__img {
   width: 698px;
-  height: 729px;
+  height: 727px;
   @include media-desktop {
     width: 569px;
     height: 593px;
-    padding-left: 19%;
+    padding-left: 139px;
   }
   @include media-big-mobile {
     width: 260px;
     height: 271.77px;
-    padding-left: 13%;
+    padding-left: 40px;
   }
 }
 
@@ -48,14 +47,14 @@
 .not-only__text {
   @include font($size: 1.5rem, $height: 160%);
   color: $color-light-text;
-  padding: 12px 0 0;
+  padding: 42px 0 0;
   @include media-big-mobile {
     padding: 42px 0 0;
   }
 }
 
 .not-only__button {
-  padding: 42px 0 0;
+  padding: 41px 0 0;
   @include media-desktop {
     width: 207px;
     height: 52px;

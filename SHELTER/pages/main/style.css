@@ -345,7 +345,7 @@ ol, ul, li {
   list-style: none;
 }
 
-.footer__info, .navigation__link, .navigation, .card:hover, .our-friends__slider_5:hover, .our-friends__slider_4:hover, .our-friends__slider_1:hover, .our-friends__arrow_right:hover, .our-friends__arrow_left:hover, .button, .hamburger, a:hover .logo__description, a:hover .logo__main, .logo {
+.footer__info, .navigation__link, .navigation, .hamburger-menu, .donation__btn, .credit-card, .card:hover, .our-friends__slider_5:hover, .our-friends__slider_4:hover, .our-friends__slider_1:hover, .our-friends__arrow_right:hover, .our-friends__arrow_left:hover, .button, .hamburger, a:hover .logo__description, a:hover .logo__main, .logo {
   transition: all 0.3s ease-out;
 }
 
@@ -353,7 +353,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.footer__info, .card__name, .button, h5, h4, h3, h2, h1 {
+.footer__info, .credit-card__number, .card__name, .button, .logo__main, h5, h4, h3, h2, h1 {
   font-family: "Georgia", serif;
 }
 
@@ -389,11 +389,9 @@ body {
 html {
   font-size: 10px;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
-  overflow-x: hidden;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
@@ -415,28 +413,19 @@ a {
 }
 
 h1 {
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+
+h2 {
   font-size: 4.4rem;
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
   letter-spacing: 0;
-}
-@media (max-width: 767px) {
-  h1 {
-    font-size: 2.5rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 130%;
-    letter-spacing: 0.06em;
-  }
-}
-
-h2 {
-  font-size: 3.5rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 129%;
-  letter-spacing: 0.06em;
 }
 @media (max-width: 767px) {
   h2 {
@@ -449,11 +438,20 @@ h2 {
 }
 
 h3 {
-  font-size: 3.2rem;
+  font-size: 3.5rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 110%;
+  line-height: 129%;
   letter-spacing: 0.06em;
+}
+@media (max-width: 767px) {
+  h3 {
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+  }
 }
 
 h4 {
@@ -496,7 +494,16 @@ h5 {
 
 .logo__main {
   display: block;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: 0.06em;
 }
+h1.logo__main {
+  margin: 0;
+}
+
 .logo__description {
   display: block;
   font-size: 1.3rem;
@@ -507,6 +514,10 @@ h5 {
   padding-top: 10px;
   text-align: center;
 }
+.logo-wrapper_hidden {
+  display: none;
+}
+
 .help-icon {
   cursor: pointer;
 }
@@ -514,6 +525,7 @@ h5 {
 .hamburger {
   display: none;
   position: relative;
+  z-index: 3;
   width: 30px;
   height: 22px;
 }
@@ -540,21 +552,6 @@ h5 {
 
 .hamburger__line {
   top: calc(50% - 1px);
-}
-
-.hamburger_hidden {
-  display: none;
-}
-@media (max-width: 767px) {
-  .hamburger_hidden.open {
-    display: flex;
-  }
-}
-
-@media (max-width: 767px) {
-  .hamburger_opened.open {
-    display: none;
-  }
 }
 
 .button {
@@ -594,39 +591,38 @@ h5 {
 }
 
 .not-only__content {
-  margin: 134px 42px 0 0;
+  margin: 163px 42px 0 0;
   width: 460px;
 }
 @media (max-width: 1279px) {
   .not-only__content {
     margin: 0;
+    padding: 30px 0 0;
   }
 }
 @media (max-width: 767px) {
   .not-only__content {
     width: 300px;
     text-align: center;
-    margin: 0;
-    padding: 30px 0 0;
   }
 }
 
 .not-only__img {
   width: 698px;
-  height: 729px;
+  height: 727px;
 }
 @media (max-width: 1279px) {
   .not-only__img {
     width: 569px;
     height: 593px;
-    padding-left: 19%;
+    padding-left: 139px;
   }
 }
 @media (max-width: 767px) {
   .not-only__img {
     width: 260px;
     height: 271.77px;
-    padding-left: 13%;
+    padding-left: 40px;
   }
 }
 
@@ -648,7 +644,7 @@ h5 {
   line-height: 160%;
   letter-spacing: 0;
   color: #cdcdcd;
-  padding: 12px 0 0;
+  padding: 42px 0 0;
 }
 @media (max-width: 767px) {
   .not-only__text {
@@ -657,7 +653,7 @@ h5 {
 }
 
 .not-only__button {
-  padding: 42px 0 0;
+  padding: 41px 0 0;
 }
 @media (max-width: 1279px) {
   .not-only__button {
@@ -717,6 +713,9 @@ h5 {
     width: 300px;
     padding: 12px 0 42px;
   }
+}
+.our-friends__slider [data-disabled=true]:hover {
+  cursor: auto;
 }
 
 .our-friends__slider_1 {
@@ -807,7 +806,7 @@ h5 {
 
 .about__wrapper {
   padding: 80px 0 100px;
-  width: 66.3%;
+  width: 850px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -816,6 +815,7 @@ h5 {
 @media (max-width: 1279px) {
   .about__wrapper {
     flex-direction: column;
+    width: 66.3%;
   }
 }
 
@@ -913,9 +913,12 @@ h5 {
   border-radius: 9px;
 }
 .card:hover {
-  transform: scale(1.1) translate(0%, -1%);
   cursor: pointer;
   background-color: #ffffff;
+}
+.card:hover > .card__button > button {
+  background-color: #fddcc4;
+  border: 2px solid #fddcc4;
 }
 
 .card__image {
@@ -1190,11 +1193,12 @@ h5 {
   flex-direction: row-reverse;
   justify-content: space-between;
   padding: 80px 0 100px;
-  width: 71.48%;
+  width: 915px;
 }
 @media (max-width: 1279px) {
   .donation__wrapper {
     flex-direction: column;
+    width: 71.48%;
   }
 }
 
@@ -1242,12 +1246,56 @@ h5 {
 @media (max-width: 767px) {
   .donation__subtitle {
     text-align: center;
-    padding-right: 4px;
     margin: 0 auto;
   }
 }
 
 .credit-card {
+  width: 350px;
+  height: 42px;
+}
+.credit-card :hover {
+  cursor: pointer;
+  background-color: #fddcc4;
+}
+@media (max-width: 767px) {
+  .credit-card {
+    width: 281px;
+    margin: 0 auto;
+  }
+}
+
+.donation__form {
+  width: 350px;
+  height: 42px;
+  border-radius: 9px;
+}
+@media (max-width: 767px) {
+  .donation__form {
+    width: 281px;
+    margin: 0 auto;
+  }
+}
+
+.credit-card__number {
+  color: #545454;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+@media (max-width: 767px) {
+  .credit-card__number {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+  }
+}
+
+.donation__btn {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -1255,9 +1303,10 @@ h5 {
   width: 350px;
   height: 42px;
   border-radius: 9px;
+  border: none;
 }
 @media (max-width: 767px) {
-  .credit-card {
+  .donation__btn {
     padding-right: 4px;
     width: 281px;
     margin: 0 auto;
@@ -1291,6 +1340,10 @@ h5 {
   }
 }
 
+.credid-card__link {
+  font-size: 0;
+}
+
 .wrapper {
   max-width: 1200px;
   margin: auto;
@@ -1319,14 +1372,21 @@ h5 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
 }
 @media (max-width: 767px) {
-  .header__wrapper.open {
+  .header__wrapper.open .header__logo_opened {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .hamburger-menu {
     position: absolute;
-    display: block;
+    display: none;
     padding: 0;
     top: 0;
-    right: 0px;
+    right: -320px;
     z-index: 1;
     width: 320px;
     height: 100vh;
@@ -1337,8 +1397,15 @@ h5 {
     letter-spacing: 0;
   }
 }
-@media (max-width: 767px) {
-  .header__wrapper.open .logo-wrapper {
+@media (max-width: 767px) and (max-width: 767px) {
+  .hamburger-menu.open {
+    transition: all 0.7s ease-out;
+    display: block;
+    right: 0;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  .hamburger-menu.open .logo-wrapper_hidden {
     width: 255px;
     display: flex;
     flex-wrap: nowrap;
@@ -1346,21 +1413,14 @@ h5 {
     justify-content: space-between;
     padding: 30px 0 0 10px;
   }
-  .header__wrapper.open .logo-wrapper > .hamburger {
-    margin: 0;
-  }
-  .header__wrapper.open .logo-wrapper > .hamburger > * {
-    display: block;
-    transform: rotate(180deg);
-  }
 }
-@media (max-width: 767px) {
-  .header__wrapper.open .header__navigation {
+@media (max-width: 767px) and (max-width: 767px) {
+  .hamburger-menu.open .header__navigation {
     margin-top: 158px;
   }
 }
-@media (max-width: 767px) {
-  .header__wrapper.open .header__navigation .navigation {
+@media (max-width: 767px) and (max-width: 767px) {
+  .hamburger-menu.open .header__navigation .navigation {
     margin-top: 150px;
     display: flex;
     flex-direction: column;
@@ -1375,10 +1435,10 @@ h5 {
     letter-spacing: 0;
     margin: 0 auto;
   }
-  .header__wrapper.open .header__navigation .navigation > * {
+  .hamburger-menu.open .header__navigation .navigation > * {
     padding: 0;
   }
-  .header__wrapper.open .header__navigation .navigation > li > a.navigation__link_active {
+  .hamburger-menu.open .header__navigation .navigation > li > a.navigation__link_active {
     text-underline-offset: 12px;
   }
 }
@@ -1502,7 +1562,7 @@ a {
 @media (max-width: 767px) {
   .footer__item_center {
     height: 222px;
-    padding-top: 39px;
+    padding-top: 40px;
   }
 }
 
@@ -1692,13 +1752,30 @@ a {
   }
 }
 
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main.open {
+  background-color: #292929;
+  opacity: 0.6;
+}
+
+.header.open {
+  background: rgba(41, 41, 41, 0.6);
+}
+
 @media (max-width: 767px) {
-  .header__wrapper.open {
+  .hamburger-menu.open {
     background-color: #292929;
   }
 }
 @media (max-width: 767px) {
-  .header__wrapper.open .header__navigation .navigation {
+  .hamburger-menu.open .header__navigation .navigation {
     background-color: #292929;
   }
 }
@@ -1766,6 +1843,11 @@ a:hover .logo__description {
   .card_jennifer {
     display: none;
   }
+}
+
+.footer.open {
+  background-color: #292929;
+  opacity: 0.6;
 }
 
 /*# sourceMappingURL=style.css.map */

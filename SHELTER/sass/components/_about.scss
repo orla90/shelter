@@ -4,13 +4,14 @@
 
 .about__wrapper {
   padding: 80px 0 100px;
-  width: 66.3%;
+  width: 850px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
   @include media-desktop {
     flex-direction: column;
+    width: 66.3%;
   }
 }
 

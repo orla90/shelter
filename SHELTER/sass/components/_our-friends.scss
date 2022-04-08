@@ -25,10 +25,13 @@
   align-items: center;
   border-radius: 9px;
   &:hover {
-    transform: scale(1.1) translate(0%, -1%);
     @extend %transition;
     cursor: pointer;
     background-color: $color-white;
+    >.card__button>button {
+      background-color: $color-primary-light;
+      border: 2px solid $color-primary-light;
+    }
   }
 }
 

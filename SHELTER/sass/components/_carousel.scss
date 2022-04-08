@@ -31,6 +31,11 @@
     width: 300px;
     padding: 12px 0 42px;
   }
+  [data-disabled='true'] {
+    &:hover {
+      cursor: auto;
+    }
+  }
 }
 
 .our-friends__slider_1 {
