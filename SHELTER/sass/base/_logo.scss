@@ -5,8 +5,16 @@
 
 .logo__main {
   display: block;
+  @extend %font-add;
+  @include font($size: 3.2rem, $height: 110%, $space: 0.06em);
   a:hover & {
     @extend %transition;
+  }
+}
+
+h1 {
+  &.logo__main {
+    margin: 0;
   }
 }
 
@@ -18,4 +26,8 @@
   a:hover & {
     @extend %transition;
   }
+}
+
+.logo-wrapper_hidden {
+  display: none;
 }

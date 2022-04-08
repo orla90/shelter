@@ -1,5 +1,59 @@
+body {
+  position: relative;
+}
+
 .header {
+  padding: 0;
+  position: sticky;
+  top: 0;
+  &.open {
+    position: static;
+    background: rgba(41, 41, 41, 0.6);
+  }
+}
+
+.hamburger-menu {
+  &.open {
+    @include media-big-mobile {
+      background-color: $color-dark;
+    }
+    .header__navigation {
+      & .navigation {
+        @include media-big-mobile {
+          background-color: $color-dark;
+        }
+      }
+    }
+  }
+}
+
+main {
+  &.open {
+    background-color: $color-white;
+    opacity: 0.6;
+  }
+}
+
+
+.header__scroller {
   padding: 30px 0;
+  background-color: $color-white;
+  overflow: auto;
+}
+
+.hamburger-menu {
+  &.open {
+    @include media-big-mobile {
+      background-color: $color-light-background;
+    }
+    .header__navigation {
+      & .navigation {
+        @include media-big-mobile {
+          background-color: $color-light-background;
+        }
+      }
+    }
+  }
 }
 
 .logo__main {
@@ -16,19 +70,73 @@
   }
 }
 
+.navigation__link {
+  color: $color-dark-title;
+  text-decoration-color: $color-primary;
+  &:hover {
+    color: $color-dark;
+    text-decoration-color: $color-primary;
+  }
+}
+
+.hamburger {
+  &::before {
+    background: $color-black;
+  }
+  &::after {
+    background: $color-black;
+  }
+}
+
+.hamburger__line {
+  background: $color-black;
+}
+
+.our-friends__carousel {
+  justify-content: center;
+}
+
+.our-friends__title {
+  @include media-desktop {
+    padding: 80px 0 30px;
+  }
+  @include media-big-mobile {
+    padding: 42px 0 40px;
+  }
+}
+
 .card {
   margin: 0 0 30px;
 }
 
-.navigation__link {
-  color: $color-dark-title;
-  &:hover {
-    color: $color-dark;
+.card_scarlett {
+  @include media-desktop {
+    display: none;
   }
 }
 
-.navigation__link_active {
-  color: $color-dark;
+.card_freddie {
+  @include media-desktop {
+    display: none;
+  }
+}
+
+.card_sophia {
+  @include media-big-mobile {
+    display: none;
+  }
+}
+
+.card_timmy {
+  @include media-big-mobile {
+    display: none;
+  }
+}
+
+.card_charly {
+  @include media-big-mobile {
+    display: none;
+  }
 }
 
 .footer {
@@ -38,4 +146,8 @@
       $color-start-gradient2 100%
     ),
     linear-gradient(0deg, $color-end-gradient, $color-end-gradient);
+    &.open {
+      background-color: $color-dark;
+      opacity: 0.6;
+    }
 }

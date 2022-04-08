@@ -30,7 +30,7 @@
 
 html {
   font-size: 10px;
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 
 body {
@@ -53,25 +53,37 @@ a {
 
 h1 {
   @extend %font-add;
-  @include font($size: 4.4rem, $height: 130%);
+  @include font($size: 3.2rem, $height: 110%, $space: 0.06em);
 }
 
 h2 {
   @extend %font-add;
-  @include font($size: 3.5rem, $height: 130%, $space: 0.06em);
+  @include font($size: 4.4rem, $height: 130%);
+  @include media-big-mobile {
+    @include font($size: 2.5rem, $height: 130%, $space: 0.06em);
+  }
 }
 
 h3 {
   @extend %font-add;
-  @include font($size: 3.2rem, $height: 110%, $space: 0.06em);
+  @include font($size: 3.5rem, $height: 129%, $space: 0.06em);
+  @include media-big-mobile {
+    @include font($size: 2.5rem, $height: 130%, $space: 0.06em);
+  }
 }
 
 h4 {
   @extend %font-add;
   @include font($size: 2rem, $height: 115%, $space: 0.06em);
+  @include media-big-mobile {
+    @include font($size: 1.5rem, $height: 110%, $space: 0.06em);
+  }
 }
 
 h5 {
   @extend %font-add;
   @include font($size: 1.5rem, $height: 110%, $space: 0.06em);
+  @include media-big-mobile {
+    @include font($size: 1.5rem, $height: 160%);
+  }
 }

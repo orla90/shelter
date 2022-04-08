@@ -1,5 +1,37 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+  &.open {
+    background-color: $color-dark;
+    opacity: 0.6;
+  }
+}
+
 .header {
-  padding: 60px 0;
+  &.open {
+    background: rgba(41, 41, 41, 0.6);
+  }
+}
+
+.hamburger-menu {
+  &.open {
+    @include media-big-mobile {
+      background-color: $color-dark;
+    }
+    .header__navigation {
+      & .navigation {
+        @include media-big-mobile {
+          background-color: $color-dark;
+        }
+      }
+    }
+  }
 }
 
 .logo__main {
@@ -27,6 +59,19 @@
   color: $color-light-cards;
 }
 
+.hamburger {
+  &::before {
+    background: $color-primary;
+  }
+  &::after {
+    background: $color-primary;
+  }
+}
+
+.hamburger__line {
+  background: $color-primary;
+}
+
 .main {
   background: radial-gradient(
       100% 215.42% at 0% 0%,
@@ -34,4 +79,34 @@
       $color-start-gradient2 100%
     ),
     linear-gradient(0deg, $color-end-gradient, $color-end-gradient);
+}
+
+.our-friends__carousel {
+  justify-content: space-between;
+}
+
+.our-friends__layout {
+  width: 990px;
+  @include media-desktop {
+    width: 580px;
+  }
+}
+
+.card_woody {
+  @include media-desktop {
+    display: none;
+  }
+}
+
+.card_jennifer {
+  @include media-big-mobile {
+    display: none;
+  }
+}
+
+.footer {
+  &.open {
+    background-color: $color-dark;
+    opacity: 0.6;
+  }
 }

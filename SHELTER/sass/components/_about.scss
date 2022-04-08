@@ -1,31 +1,59 @@
 .about {
   background-color: $color-white;
-  padding: 80px 215px 100px;
 }
 
 .about__wrapper {
+  padding: 80px 0 100px;
+  width: 850px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
+  @include media-desktop {
+    flex-direction: column;
+    width: 66.3%;
+  }
 }
 
 .about__img {
   width: 300px;
   height: 408px;
+  @include media-desktop {
+    padding: 80px 0 100px;
+  }
+  @include media-big-mobile {
+    padding: 40px 0 44px;
+    width: 260px;
+    height: 353.6px;
+  }
 }
 
 .about__content {
   width: 430px;
-  height: 380px;
+  @include media-big-mobile {
+    width: 270px;
+  }
 }
 
 .about__title {
   width: 370px;
+  @include media-desktop {
+    padding-top: 80px;
+  }
+  @include media-big-mobile {
+    width: 270px;
+    padding: 42px 0 2px;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .about__text {
   @include font($size: 1.5rem, $height: 160%);
   padding: 25px 0 0;
   color: $color-dark-text;
+  @include media-big-mobile {
+    text-align: justify;
+    padding: 22px 0 0;
+  }
 }

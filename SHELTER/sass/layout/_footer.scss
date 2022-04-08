@@ -1,9 +1,25 @@
 .footer__wrapper {
   padding: 40px 0 0;
+  @include media-desktop {
+    width: 708px;
+    padding: 30px 0 0;
+  }
+  @include media-big-mobile {
+    padding: 30px 0 0;
+    width: 300px;
+  }
 }
 
 .footer__title {
   color: $color-white;
+}
+
+.footer__title_contacts {
+  width: 279px;
+}
+
+.footer__title_address {
+  width: 270px;
 }
 
 .footer__item {
@@ -12,10 +28,46 @@
   flex-direction: column;
   justify-content: space-between;
   height: 234px;
+  @include media-desktop {
+    padding: 0;
+  }
+  @include media-big-mobile {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.footer__item_begin {
+  width: 278px;
+  @include media-big-mobile {
+    height: 208px;
+  }
 }
 
 .footer__item_center {
+  width: 302px;
   padding-right: 22px;
+  @include media-desktop {
+    padding: 0;
+  }
+  @include media-big-mobile {
+    height: 222px;
+    padding-top: 40px;
+  }
+}
+
+.footer__info_center {
+  width: 258px;
+  @include media-big-mobile {
+    text-align: left;
+  }
+}
+
+.footer__info_center2 {
+  @include media-big-mobile {
+    width: 258px;
+    text-align: left;
+  }
 }
 
 .contacts-item {
@@ -44,13 +96,28 @@
 
 .footer__info {
   color: $color-primary;
+  @extend %font-add;
+  @include font($size: 2rem, $height: 115%, $space: 0.06em);
+  @extend %transition;
+  &:hover {
+    color: $color-primary-light;
+  }
 }
 
-.footer__info_center {
-  padding-left: 10px;
+.footer__image {
+  display: flex;
+  justify-content: center;
 }
 
 .footer__img {
   width: 300px;
   height: 310px;
+  @include media-desktop {
+    padding-top: 64px;
+  }
+  @include media-big-mobile {
+    width: 260px;
+    height: 269px;
+    padding-top: 40px;
+  }
 }

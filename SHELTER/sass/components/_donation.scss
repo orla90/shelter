@@ -8,12 +8,24 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   padding: 80px 0 100px;
-  width: 71.48%;
+  width: 915px;
+  @include media-desktop {
+    flex-direction: column;
+    width: 71.48%;
+  }
 }
 
 .donation__img {
   width: 505px;
   height: 261px;
+  @include media-desktop {
+    padding: 60px 0 100px;
+  }
+  @include media-big-mobile {
+    width: 260px;
+    height: 135.2px;
+    padding: 42px 0;
+  }
 }
 
 .donation__content {
@@ -22,20 +34,73 @@
 
 .donation__title {
   width: 300px;
+  @include media-desktop {
+    padding-top: 80px;
+  }
+  @include media-big-mobile {
+    width: 225px;
+    padding-top: 40px;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 
 .donation__subtitle {
   padding: 20px 0 20px;
+  @include media-big-mobile {
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 
 .credit-card {
+  width: 350px;
+  height: 42px;
+  @extend %transition;
+  :hover {
+    cursor: pointer;
+    background-color: $color-primary-light;
+  }
+  @include media-big-mobile {
+    width: 281px;
+    margin: 0 auto;
+  }
+}
+
+.donation__form {
+  width: 350px;
+  height: 42px;
+  border-radius: 9px;
+  @include media-big-mobile {
+    width: 281px;
+    margin: 0 auto;
+  }
+}
+
+.credit-card__number {
+  color: $color-dark-title;
+  @extend %font-add;
+  @include font($size: 2rem, $height: 115%, $space: 0.06em);
+  @include media-big-mobile {
+    @include font($size: 1.5rem, $height: 110%, $space: 0.06em);
+  }
+}
+
+.donation__btn {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   background-color: $color-primary;
-  width: 349px;
-  height: 43px;
+  width: 350px;
+  height: 42px;
   border-radius: 9px;
+  border: none;
+  @extend %transition;
+  @include media-big-mobile {
+    padding-right: 4px;
+    width: 281px;
+    margin: 0 auto;
+  }
 }
 
 .credit-card__ico {
@@ -47,4 +112,14 @@
   padding: 20px 0 0;
   @include font($size: 1.2rem, $height: 150%, $style: italic);
   color: $color-gray-text;
+  @include media-big-mobile {
+    width: 281px;
+    margin: 0 auto;
+    text-align: justify;
+    align-items: center;
+  }
+}
+
+.credid-card__link {
+  font-size: 0;
 }

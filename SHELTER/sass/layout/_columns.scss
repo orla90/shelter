@@ -1,12 +1,37 @@
 .layout-3-column {
   @include columns($width: 25%, $justify: space-between);
+  @include media-big-mobile {
+    @include columns($width: 30%, $justify: center);
+  }
+}
+
+.footer__layout-3-column {
+  @include columns($width: 25%, $justify: space-between);
+  @include media-desktop {
+    @include columns($width: 42.7%, $justify: space-evenly);
+  }
+  @include media-big-mobile {
+    @include columns($width: 90%, $justify: center);
+  }
 }
 
 .layout-4-column {
   @include columns($width: 20%, $justify: space-between);
+  @include media-big-mobile {
+    @include columns($width: 51%, $justify: center);
+  }
 }
 
 .layout-5-column {
   @include columns($width: fit-content, $justify: center);
-  column-gap: 12rem;
+  @include media-desktop {
+    @include columns($width: 26.7%, $justify: space-between);
+    width: 630px;
+    column-gap: 6rem;
+  }
+  @include media-big-mobile {
+    @include columns($width: 130px, $justify: space-between);
+    width: 290px;
+    column-gap: 0;
+  }
 }

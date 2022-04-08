@@ -3,12 +3,18 @@
 }
 
 .our-friends__layout {
-  width: 990px;
+  @include media-desktop {
+    @include columns($width: 45%, $justify: center);
+    width: 580px;
+  }
+  @include media-big-mobile {
+    width: 300px;
+    margin: 0 auto;
+  }
 }
 
 .our-friends__carousel {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -19,10 +25,13 @@
   align-items: center;
   border-radius: 9px;
   &:hover {
-    transform: scale(1.1) translate(0%, -1%);
     @extend %transition;
     cursor: pointer;
     background-color: $color-white;
+    >.card__button>button {
+      background-color: $color-primary-light;
+      border: 2px solid $color-primary-light;
+    }
   }
 }
 
@@ -33,6 +42,8 @@
 
 .card__name {
   padding: 30px 0 0;
+  @extend %font-add;
+  @include font($size: 2rem, $height: 115%, $space: 0.06em);
 }
 
 .card__button {
@@ -44,6 +55,12 @@
   margin: 0 auto;
   text-align: center;
   padding: 80px 0 60px;
+  @include media-big-mobile {
+    padding: 42px 0 40px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .our-friends__button {
@@ -51,78 +68,7 @@
   margin: 0 auto;
   text-align: center;
   padding: 60px 0 100px;
-}
-
-.our-friends__arrow_left {
-  background: url(../../assets/icons/paginator/button_arrow_left.svg);
-  @include background($width: 52px, $height: 52px);
-  &:hover {
-    cursor: pointer;
-    @extend %transition;
-    background: url(../../assets/icons/paginator/button_arrow_left_hover.svg);
-  }
-}
-
-.our-friends__arrow_right {
-  background: url(../../assets/icons/paginator/button_arrow_right.svg);
-  @include background($width: 52px, $height: 52px);
-  &:hover {
-    cursor: pointer;
-    @extend %transition;
-    background: url(../../assets/icons/paginator/button_arrow_right_hover.svg);
-  }
-}
-
-.our-friends__slider {
-  display: flex;
-  width: 340px;
-  justify-content: space-between;
-  margin: 0 auto;
-  padding: 30px 0 100px;
-}
-
-.our-friends__slider_1 {
-  background: url(../../assets/icons/paginator/button_paginator_inactive1.svg);
-  @include background($width: 52px, $height: 52px);
-  &:hover {
-    cursor: pointer;
-    @extend %transition;
-    background: url(../../assets/icons/paginator/button_paginator_inactive1.svg);
-  }
-}
-
-.our-friends__slider_2 {
-  background: url(../../assets/icons/paginator/button_paginator_inactive2.svg);
-  @include background($width: 52px, $height: 52px);
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.our-friends__slider_3 {
-  background: url(../../assets/icons/paginator/button_paginator_center.svg);
-  @include background($width: 52px, $height: 52px);
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.our-friends__slider_4 {
-  background: url(../../assets/icons/paginator/button_paginator_active1.svg);
-  @include background($width: 52px, $height: 52px);
-  &:hover {
-    cursor: pointer;
-    @extend %transition;
-    background: url(../../assets/icons/paginator/button_paginator_active1_hover.svg);
-  }
-}
-
-.our-friends__slider_5 {
-  background: url(../../assets/icons/paginator/button_paginator_active2.svg);
-  @include background($width: 52px, $height: 52px);
-  &:hover {
-    cursor: pointer;
-    @extend %transition;
-    background: url(../../assets/icons/paginator/button_paginator_active2_hover.svg);
+  @include media-big-mobile {
+    padding: 42px 0 42px;
   }
 }

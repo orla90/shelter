@@ -13,9 +13,10 @@
   }
   &_colored {
     background-color: $color-primary;
+    border: 2px solid $color-primary;
   }
   &:hover {
     background-color: $color-primary-light;
-    border: $color-primary-light;
+    border: 2px solid $color-primary-light;
   }
 }
