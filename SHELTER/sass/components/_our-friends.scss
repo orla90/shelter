@@ -2,20 +2,59 @@
   background-color: $color-light-background;
 }
 
-.our-friends__layout {
+.carousel-container {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+
   @include media-desktop {
-    @include columns($width: 45%, $justify: center);
     width: 580px;
+    display: flex;
+    column-gap: 4rem;
+  > * {
+    flex-basis: 45%;
+  }
   }
   @include media-big-mobile {
-    width: 300px;
-    margin: 0 auto;
+    width: 270px;
+    > * {
+      flex-basis: 50%;
+    }
   }
+}
+
+.our-friends__layout {
+  display: flex;
 }
 
 .our-friends__carousel {
   display: flex;
   align-items: center;
+  @include media-desktop {
+    width: 708px;
+    margin: 0 auto;
+  }
+  @include media-big-mobile {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px 80px;
+    width: 270px;
+  }
+}
+
+.carousel-item {
+  display: flex;
+  column-gap: 9rem;
+  width: 990px;
+  @include media-desktop {
+    column-gap: 4rem;
+    width: 580px;
+  }
+  @include media-big-mobile {
+    column-gap: 0;
+    width: 270px;
+  }
 }
 
 .card {
@@ -71,4 +110,52 @@
   @include media-big-mobile {
     padding: 42px 0 42px;
   }
+}
+
+@keyframes move-right {
+  from {left: -990px;}
+  to {left: -1980px;}
+}
+
+@include media-desktop {
+  @keyframes move-right {
+    from {left: -580px;}
+    to {left: -1160px;}
+    }
+}
+
+@include media-big-mobile{
+  @keyframes move-right {
+    from {left: -270px;}
+    to {left: -540px;}
+    }
+}
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 0.5s;
+}
+
+@keyframes move-left {
+  from {left: -990px;}
+  to {left: 0px;}
+}
+
+@include media-desktop {
+  @keyframes move-left {
+    from {left: -580px;}
+    to {left: 0px;}
+    }
+}
+
+@include media-big-mobile {
+  @keyframes move-left {
+    from {left: -270px;}
+    to {left: 0px;}
+    }
+}
+
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 0.5s;
 }

@@ -15,20 +15,18 @@ main {
 
 .header {
   &.open {
-    background: rgba(41, 41, 41, 0.6);
+    background: $color-overlay;
   }
 }
 
 .hamburger-menu {
-  &.open {
-    @include media-big-mobile {
-      background-color: $color-dark;
-    }
-    .header__navigation {
-      & .navigation {
-        @include media-big-mobile {
-          background-color: $color-dark;
-        }
+  @include media-big-mobile {
+    background-color: $color-dark;
+  }
+  .header__navigation {
+    & .navigation {
+      @include media-big-mobile {
+        background-color: $color-dark;
       }
     }
   }
@@ -86,9 +84,29 @@ main {
 }
 
 .our-friends__layout {
+  display: flex;
+  position: relative;
+  left: -990px;
+  @include media-desktop {
+    left: -580px;
+  }
+  @include media-big-mobile {
+    left: -270px;
+  }
+}
+
+.carousel-container {
   width: 990px;
+  height: 431px;
+
   @include media-desktop {
     width: 580px;
+  }
+  @include media-big-mobile {
+    width: 270px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    order: -1;
   }
 }
 

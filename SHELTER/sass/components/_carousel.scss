@@ -6,6 +6,10 @@
     @extend %transition;
     background: url(../../assets/icons/paginator/button_arrow_left_hover.svg);
   }
+
+  @include media-big-mobile {
+    justify-self: end;
+  }
 }
 
 .our-friends__arrow_right {
@@ -16,6 +20,9 @@
     @extend %transition;
     background: url(../../assets/icons/paginator/button_arrow_right_hover.svg);
   }
+  @include media-big-mobile {
+    justify-self: start;
+  }
 }
 
 .our-friends__slider {
@@ -23,13 +30,13 @@
   width: 340px;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 30px 0 100px;
+  padding: 60px 0 100px;
   @include media-desktop {
-    padding: 10px 0 76px;
+    padding: 38px 0 76px;
   }
   @include media-big-mobile {
     width: 300px;
-    padding: 12px 0 42px;
+    padding: 43px 0;
   }
   [data-disabled='true'] {
     &:hover {
@@ -39,28 +46,46 @@
 }
 
 .our-friends__slider_1 {
-  background: url(../../assets/icons/paginator/button_paginator_inactive1.svg);
-  @include background($width: 52px, $height: 52px);
+  background: url(../../assets/icons/paginator/button_paginator_active_left_all.svg);
+  width: 52px;
   &:hover {
     cursor: pointer;
-    @extend %transition;
+    background: url(../../assets/icons/paginator/button_paginator_active_hover_left_all.svg);
+  }
+  &.btn-disabled {
     background: url(../../assets/icons/paginator/button_paginator_inactive1.svg);
+    &:hover {
+      cursor: auto;
+    }
   }
 }
 
 .our-friends__slider_2 {
-  background: url(../../assets/icons/paginator/button_paginator_inactive2.svg);
+  background: url(../../assets/icons/paginator/button_paginator_active_left.svg);
   @include background($width: 52px, $height: 52px);
   &:hover {
     cursor: pointer;
+    background: url(../../assets/icons/paginator/button_paginator_active_hover_left.svg);
+  }
+  &.btn-disabled {
+    background: url(../../assets/icons/paginator/button_paginator_inactive_left.svg);
+    &:hover {
+      cursor: auto;
+    }
   }
 }
 
 .our-friends__slider_3 {
-  background: url(../../assets/icons/paginator/button_paginator_center.svg);
   @include background($width: 52px, $height: 52px);
+  display: flex;
+  align-items: center;
+  background-color: $color-primary;
+  border-radius: 100px;
+  @extend %font-add;
+  @include font($size: 2rem, $height: 115%, $space: 0.06em);
+  justify-content: center;
   &:hover {
-    cursor: pointer;
+    cursor: default;
   }
 }
 
@@ -72,6 +97,12 @@
     @extend %transition;
     background: url(../../assets/icons/paginator/button_paginator_active1_hover.svg);
   }
+  &.btn-disabled {
+    background: url(../../assets/icons/paginator/button_paginator_inactive_right.svg);
+    &:hover {
+      cursor: auto;
+    }
+  }
 }
 
 .our-friends__slider_5 {
@@ -82,21 +113,10 @@
     @extend %transition;
     background: url(../../assets/icons/paginator/button_paginator_active2_hover.svg);
   }
-}
-
-.our-friends__carousel_shown {
-  @include media-big-mobile {
-    display: none;
-  }
-}
-
-.our-friends-main__slider {
-  display: none;
-  @include media-big-mobile {
-    display: flex;
-    width: 185px;
-    margin: 20px auto 0;
-    display: flex;
-    justify-content: space-between;
+  &.btn-disabled {
+    background: url(../../assets/icons/paginator/button_paginator_inactive_right_all.svg);
+    &:hover {
+      cursor: auto;
+    }
   }
 }

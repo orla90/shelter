@@ -1,10 +1,3 @@
-.layout-3-column {
-  @include columns($width: 25%, $justify: space-between);
-  @include media-big-mobile {
-    @include columns($width: 30%, $justify: center);
-  }
-}
-
 .footer__layout-3-column {
   @include columns($width: 25%, $justify: space-between);
   @include media-desktop {
@@ -16,9 +9,9 @@
 }
 
 .layout-4-column {
-  @include columns($width: 20%, $justify: space-between);
+  @include columns($width: 20%, $justify: space-between, $wrap: nowrap);
   @include media-big-mobile {
-    @include columns($width: 51%, $justify: center);
+    @include columns($width: 51%, $justify: center, $wrap: nowrap);
   }
 }
 
