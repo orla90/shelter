@@ -6,10 +6,10 @@
   letter-spacing: $space;
 }
 
-@mixin columns($width, $justify) {
+@mixin columns($width, $justify, $wrap: wrap) {
   display: flex;
   justify-content: $justify;
-  flex-wrap: wrap;
+  flex-wrap: $wrap;
   > * {
     flex-basis: $width;
   }

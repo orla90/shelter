@@ -5,25 +5,11 @@ body {
 .header {
   padding: 0;
   position: sticky;
+  z-index: 2;
   top: 0;
   &.open {
     position: static;
     background: rgba(41, 41, 41, 0.6);
-  }
-}
-
-.hamburger-menu {
-  &.open {
-    @include media-big-mobile {
-      background-color: $color-dark;
-    }
-    .header__navigation {
-      & .navigation {
-        @include media-big-mobile {
-          background-color: $color-dark;
-        }
-      }
-    }
   }
 }
 
@@ -34,7 +20,6 @@ main {
   }
 }
 
-
 .header__scroller {
   padding: 30px 0;
   background-color: $color-white;
@@ -42,15 +27,13 @@ main {
 }
 
 .hamburger-menu {
-  &.open {
-    @include media-big-mobile {
-      background-color: $color-light-background;
-    }
-    .header__navigation {
-      & .navigation {
-        @include media-big-mobile {
-          background-color: $color-light-background;
-        }
+  @include media-big-mobile {
+    background-color: $color-light-background;
+  }
+  .header__navigation {
+    & .navigation {
+      @include media-big-mobile {
+        background-color: $color-light-background;
       }
     }
   }
@@ -105,6 +88,35 @@ main {
   }
 }
 
+.carousel-container {
+  width: 1200px;
+  max-height: 900px;
+  margin: 0 auto;
+
+  @include media-desktop {
+    width: 580px;
+    max-height: 1365px;
+  }
+  @include media-big-mobile {
+    width: 270px;
+  }
+}
+
+.carousel-items {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  max-height: 900px;
+  width: 1200px;
+  @include media-desktop {
+    width: 580px;
+    max-height: 1365px;
+  }
+  @include media-big-mobile {
+    width: 270px;
+  }
+}
+
 .card {
   margin: 0 0 30px;
 }
@@ -146,8 +158,8 @@ main {
       $color-start-gradient2 100%
     ),
     linear-gradient(0deg, $color-end-gradient, $color-end-gradient);
-    &.open {
-      background-color: $color-dark;
-      opacity: 0.6;
-    }
+  &.open {
+    background-color: $color-dark;
+    opacity: 0.6;
+  }
 }

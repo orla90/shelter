@@ -9,23 +9,16 @@
   </head>
   <body class="pets">
     <header class="header">
+      <div class="body-overlay"></div>
       <div class="header__scroller">
         <div class="wrapper header__wrapper">
           <div class="logo-wrapper logo-wrapper_opened">
-            <a href="../main/index.html" class="header__logo header__logo_opened">
+            <a
+              href="../main/index.html"
+              class="header__logo header__logo_opened"
+            >
               <div class="logo">
                 <h1 class="logo__main">Cozy House</h1>
-                <span class="logo__description">Shelter for pets in Boston</span>
-              </div>
-            </a>
-          </div>
-
-          <div class="hamburger-menu">
-
-          <div class="logo-wrapper logo-wrapper_hidden">
-            <a href="../main/index.html" class="header__logo">
-              <div class="logo">
-                <span class="logo__main">Cozy House</span>
                 <span class="logo__description"
                   >Shelter for pets in Boston</span
                 >
@@ -33,30 +26,40 @@
             </a>
           </div>
 
+          <div class="hamburger-menu">
+            <div class="logo-wrapper logo-wrapper_hidden">
+              <a href="../main/index.html" class="header__logo">
+                <div class="logo">
+                  <span class="logo__main">Cozy House</span>
+                  <span class="logo__description"
+                    >Shelter for pets in Boston</span
+                  >
+                </div>
+              </a>
+            </div>
 
-          <nav class="header__navigation">
-            <ul class="navigation">
-              <li class="navigation__link">
-                <a class="navigation__link" href="../main/index.html"
-                  >About the shelter</a
-                >
-              </li>
-              <li class="navigation__link navigation__link_active">
-                <a class="navigation__link" href="../pets/index.html"
-                  >Our pets</a
-                >
-              </li>
-              <li class="navigation__link">
-                <a class="navigation__link" href="../main/index.html#help"
-                  >Help the shelter</a
-                >
-              </li>
-              <li class="navigation__link">
-                <a class="navigation__link" href="#footer">Contacts</a>
-              </li>
-            </ul>
-          </nav>
-
+            <nav class="header__navigation">
+              <ul class="navigation">
+                <li class="navigation__link">
+                  <a class="navigation__link" href="../main/index.html"
+                    >About the shelter</a
+                  >
+                </li>
+                <li class="navigation__link navigation__link_active">
+                  <a class="navigation__link" href="../pets/index.html"
+                    >Our pets</a
+                  >
+                </li>
+                <li class="navigation__link">
+                  <a class="navigation__link" href="../main/index.html#help"
+                    >Help the shelter</a
+                  >
+                </li>
+                <li class="navigation__link">
+                  <a class="navigation__link" href="#footer">Contacts</a>
+                </li>
+              </ul>
+            </nav>
           </div>
 
           <span class="hamburger hamburger_opened">
@@ -71,108 +74,130 @@
           <h3 class="our-friends__title">
             Our friends who<br />are looking for a house
           </h3>
-          <div class="our-friends__carousel">
-            <div class="layout-4-column our-friends__layout">
-              <div class="card card_katrine">
-                <img
-                  class="card__image"
-                  src="../../assets/images/pets-katrine.png"
-                  alt="pet Katrine"
-                />
-                <p class="card__name">Katrine</p>
-                <div class="card__button">
-                  <button class="button button_bordered">Learn more</button>
-                </div>
-              </div>
-              <div class="card card_jennifer">
-                <img
-                  class="card__image"
-                  src="../../assets/images/pets-jennifer.png"
-                  alt="pet Jennifer"
-                />
-                <p class="card__name">Jennifer</p>
-                <div class="card__button">
-                  <button class="button button_bordered">Learn more</button>
-                </div>
-              </div>
-              <div class="card card_woody">
-                <img
-                  class="card__image"
-                  src="../../assets/images/pets-woody.png"
-                  alt="pet Woody"
-                />
+          <!-- <div class="our-friends__carousel"> -->
+            <div class="carousel-container">
+              <div class="layout-4-column our-friends__layout">
 
-                <p class="card__name">Woody</p>
-                <div class="card__button">
-                  <button class="button button_bordered">Learn more</button>
-                </div>
-              </div>
-              <div class="card card_sophia">
-                <img
-                  class="card__image"
-                  src="../../assets/images/pets-sophia.jpg"
-                  alt="pet Sophia"
-                />
+                <div class="carousel-items carousel-item_first">
 
-                <p class="card__name">Sophia</p>
-                <div class="card__button">
-                  <button class="button button_bordered">Learn more</button>
-                </div>
-              </div>
-              <div class="card card_timmy">
-                <img
-                  class="card__image"
-                  src="../../assets/images/pets-timmy.png"
-                  alt="pet Timmy"
-                />
+                  <div class="card card_katrine">
+                    <img
+                      class="card__image"
+                      src="../../assets/images/pets-katrine.png"
+                      alt="pet Katrine"
+                    />
+                    <p class="card__name">Katrine</p>
+                    <div class="card__button">
+                      <button class="button button_bordered">Learn more</button>
+                    </div>
+                  </div>
+                  <div class="card card_jennifer">
+                    <img
+                      class="card__image"
+                      src="../../assets/images/pets-jennifer.png"
+                      alt="pet Jennifer"
+                    />
+                    <p class="card__name">Jennifer</p>
+                    <div class="card__button">
+                      <button class="button button_bordered">Learn more</button>
+                    </div>
+                  </div>
+                  <div class="card card_woody">
+                    <img
+                      class="card__image"
+                      src="../../assets/images/pets-woody.png"
+                      alt="pet Woody"
+                    />
+  
+                    <p class="card__name">Woody</p>
+                    <div class="card__button">
+                      <button class="button button_bordered">Learn more</button>
+                    </div>
+                  </div>
+                  <div class="card card_sophia">
+                    <img
+                      class="card__image"
+                      src="../../assets/images/pets-sophia.jpg"
+                      alt="pet Sophia"
+                    />
+  
+                    <p class="card__name">Sophia</p>
+                    <div class="card__button">
+                      <button class="button button_bordered">Learn more</button>
+                    </div>
+                  </div>
+                  <div class="card card_timmy">
+                    <img
+                      class="card__image"
+                      src="../../assets/images/pets-timmy.png"
+                      alt="pet Timmy"
+                    />
+  
+                    <p class="card__name">Timmy</p>
+                    <div class="card__button">
+                      <button class="button button_bordered">Learn more</button>
+                    </div>
+                  </div>
+                  <div class="card card_charly">
+                    <img
+                      class="card__image"
+                      src="../../assets/images/pets-charly.jpg"
+                      alt="pet Charly"
+                    />
+  
+                    <p class="card__name">Charly</p>
+                    <div class="card__button">
+                      <button class="button button_bordered">Learn more</button>
+                    </div>
+                  </div>
+                  <div class="card card_scarlett">
+                    <img
+                      class="card__image"
+                      src="../../assets/images/pets-scarlet.png"
+                      alt="pet Scarlett"
+                    />
+  
+                    <p class="card__name">Scarlett</p>
+                    <div class="card__button">
+                      <button class="button button_bordered">Learn more</button>
+                    </div>
+                  </div>
+                  <div class="card card_freddie">
+                    <img
+                      class="card__image"
+                      src="../../assets/images/pets-freddie.png"
+                      alt="pet Freddie"
+                    />
+  
+                    <p class="card__name">Freddie</p>
+                    <div class="card__button">
+                      <button class="button button_bordered">Learn more</button>
+                    </div>
+                  </div>
 
-                <p class="card__name">Timmy</p>
-                <div class="card__button">
-                  <button class="button button_bordered">Learn more</button>
                 </div>
-              </div>
-              <div class="card card_charly">
-                <img
-                  class="card__image"
-                  src="../../assets/images/pets-charly.jpg"
-                  alt="pet Charly"
-                />
-
-                <p class="card__name">Charly</p>
-                <div class="card__button">
-                  <button class="button button_bordered">Learn more</button>
-                </div>
-              </div>
-              <div class="card card_scarlett">
-                <img
-                  class="card__image"
-                  src="../../assets/images/pets-scarlet.png"
-                  alt="pet Scarlett"
-                />
-
-                <p class="card__name">Scarlett</p>
-                <div class="card__button">
-                  <button class="button button_bordered">Learn more</button>
-                </div>
-              </div>
-              <div class="card card_freddie">
-                <img
-                  class="card__image"
-                  src="../../assets/images/pets-freddie.png"
-                  alt="pet Freddie"
-                />
-
-                <p class="card__name">Freddie</p>
-                <div class="card__button">
-                  <button class="button button_bordered">Learn more</button>
-                </div>
+                <div class="carousel-items carousel-item_second"></div>
+                <div class="carousel-items carousel-item_third"></div>
+                <div class="carousel-items carousel-item_fourth"></div>
+                <div class="carousel-items carousel-item_fifth"></div>
+                <div class="carousel-items carousel-item_sixth"></div>
+                <div class="carousel-items carousel-item_seventh"></div>
+                <div class="carousel-items carousel-item_eighth"></div>
+                <div class="carousel-items carousel-item_nineth"></div>
+                <div class="carousel-items carousel-item_tenth"></div>
+                <div class="carousel-items carousel-item_eleventh"></div>
+                <div class="carousel-items carousel-item_twelves"></div>
+                <div class="carousel-items carousel-item_thirteenth"></div>
+                <div class="carousel-items carousel-item_fourteenth"></div>
+                <div class="carousel-items carousel-item_fifteenth"></div>
+                <div class="carousel-items carousel-item_sixteenth"></div>
               </div>
             </div>
-          </div>
+          <!-- </div> -->
           <div class="our-friends__slider">
-            <span class="our-friends__slider_1" data-disabled="true"></span>
-            <span class="our-friends__slider_2" data-disabled="true"></span>
-            <span class="our-friends__slider_3" data-disabled="true"></span>
+            <span class="our-friends__slider_1"></span>
+            <span class="our-friends__slider_2"></span>
+            <span class="our-friends__slider_3">1</span>
             <span class="our-friends__slider_4"></span>
             <span class="our-friends__slider_5"></span>
           </div>
