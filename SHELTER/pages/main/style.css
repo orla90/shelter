@@ -1775,13 +1775,16 @@ h1.logo__main {
 }
 @media (max-width: 767px) and (max-width: 767px) {
   .hamburger-menu.open .header__navigation {
-    margin-top: 158px;
     width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
   }
 }
 @media (max-width: 767px) and (max-width: 767px) {
   .hamburger-menu.open .header__navigation .navigation {
-    margin-top: 150px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
