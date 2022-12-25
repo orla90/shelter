@@ -1144,14 +1144,23 @@ h1.logo__main {
   }
 }
 
-.carousel-item {
-  display: flex;
-  flex-wrap: wrap;
+.carousel-item_pets {
   column-gap: 4rem;
   width: 1200px;
 }
+
+.carousel-item_main {
+  column-gap: 9rem;
+  width: 990px;
+}
+
+.carousel-item {
+  display: flex;
+  flex-wrap: wrap;
+}
 @media (max-width: 1279px) {
   .carousel-item {
+    column-gap: 4rem;
     width: 580px;
   }
 }
