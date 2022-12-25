@@ -110,6 +110,7 @@ const generateCardWrapper = () => {
   for (let i = 0; i < PAGE_AMOUNT; i += 1) {
     const cardWrapper = document.createElement('div');
     cardWrapper.classList.add(`carousel-item`);
+    cardWrapper.classList.add(`carousel-item_pets`);
     cardWrapper.innerHTML = template;
     wrapperArr.push(cardWrapper);
   }
