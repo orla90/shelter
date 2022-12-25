@@ -1,4 +1,10 @@
-# orla90-JSFE2022Q1
-Private repository for @orla90
+# Shelter
+Shelter is a responsive and interactive project that consists of two pages.
 
-CV: https://orla90.github.io/rsschool-cv/
+### Deploy
+[Shelter](https://orla90.github.io/shelter/SHELTER/pages/main/index.html)
+
+### Stack
+- Javascript
+- [SCSS](https://sass-lang.com/)
+- [BEM](https://en.bem.info/)
