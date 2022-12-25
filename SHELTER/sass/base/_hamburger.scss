@@ -1,0 +1,33 @@
+.hamburger {
+  display: none;
+  position: relative;
+  z-index: 4;
+  width: 30px;
+  height: 22px;
+  @extend %transition;
+  &.open {
+    transform: rotate(90deg);
+  }
+  @include media-big-mobile {
+    display: inline-block;
+    margin-right: 43px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &::before {
+    @extend %hamburger-line;
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    @extend %hamburger-line;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.hamburger__line {
+  @extend %hamburger-line;
+  top: calc(50% - 1px);
+}

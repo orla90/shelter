@@ -1,0 +1,130 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+  &.open {
+    background-color: $color-dark;
+    opacity: 0.6;
+  }
+}
+
+.header {
+  &.open {
+    background: $color-overlay;
+  }
+}
+
+.hamburger-menu {
+  @include media-big-mobile {
+    background-color: $color-dark;
+  }
+  .header__navigation {
+    & .navigation {
+      @include media-big-mobile {
+        background-color: $color-dark;
+      }
+    }
+  }
+}
+
+.logo__main {
+  color: $color-primary;
+  a:hover & {
+    color: $color-primary-light;
+  }
+}
+
+.logo__description {
+  color: $color-light-text;
+  a:hover & {
+    color: $color-white;
+  }
+}
+
+.navigation__link {
+  color: $color-light-text;
+  &:hover {
+    color: $color-light-cards;
+  }
+}
+
+.navigation__link_active {
+  color: $color-light-cards;
+}
+
+.hamburger {
+  &::before {
+    background: $color-primary;
+  }
+  &::after {
+    background: $color-primary;
+  }
+}
+
+.hamburger__line {
+  background: $color-primary;
+}
+
+.main {
+  background: radial-gradient(
+      100% 215.42% at 0% 0%,
+      $color-start-gradient1 0%,
+      $color-start-gradient2 100%
+    ),
+    linear-gradient(0deg, $color-end-gradient, $color-end-gradient);
+}
+
+.our-friends__carousel {
+  justify-content: space-between;
+}
+
+.our-friends__layout {
+  display: flex;
+  position: relative;
+  left: -990px;
+  @include media-desktop {
+    left: -580px;
+  }
+  @include media-big-mobile {
+    left: -270px;
+  }
+}
+
+.carousel-container {
+  width: 990px;
+  height: 431px;
+
+  @include media-desktop {
+    width: 580px;
+  }
+  @include media-big-mobile {
+    width: 270px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    order: -1;
+  }
+}
+
+.card_woody {
+  @include media-desktop {
+    display: none;
+  }
+}
+
+.card_jennifer {
+  @include media-big-mobile {
+    display: none;
+  }
+}
+
+.footer {
+  &.open {
+    background-color: $color-dark;
+    opacity: 0.6;
+  }
+}
