@@ -27,7 +27,7 @@ export class CardModal extends Modal {
     this.parasites = parasites;
   }
 
-  //Cards content generator
+  /* Cards content generator */
   generateContent() {
     let template = '';
     let card = document.createElement('div');

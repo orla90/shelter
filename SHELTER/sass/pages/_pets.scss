@@ -102,21 +102,6 @@ main {
   }
 }
 
-.carousel-items {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 40px;
-  max-height: 900px;
-  width: 1200px;
-  @include media-desktop {
-    width: 580px;
-    max-height: 1365px;
-  }
-  @include media-big-mobile {
-    width: 270px;
-  }
-}
-
 .card {
   margin: 0 0 30px;
 }

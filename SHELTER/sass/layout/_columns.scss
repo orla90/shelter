@@ -10,6 +10,7 @@
 
 .layout-4-column {
   @include columns($width: 20%, $justify: space-between, $wrap: nowrap);
+  @extend %transition;
   @include media-big-mobile {
     @include columns($width: 51%, $justify: center, $wrap: nowrap);
   }

@@ -9,33 +9,24 @@ export class Modal {
   }
 
   buildModal(content) {
-    //Parent
     this.parent = this.createDomNode(
       this.parent,
       'div',
       'parent',
       'parent_modal'
     );
-
-    //Overlay
     this.overlay = this.createDomNode(
       this.overlay,
       'div',
       'overlay',
       'overlay_modal'
     );
-
-    //Modal
     this.modal = this.createDomNode(this.modal, 'div', 'modal', this.classes);
-
-    //Modal content
     this.modalContent = this.createDomNode(
       this.modalContent,
       'div',
       'modal__content'
     );
-
-    //Close button
     this.modalCloseBtn = this.createDomNode(
       this.modalCloseBtn,
       'span',
@@ -46,10 +37,8 @@ export class Modal {
 
     this.appendModalElements();
 
-    // Bind Events
     this.bindEvents();
 
-    //Open Modal
     this.openModal();
   }
 

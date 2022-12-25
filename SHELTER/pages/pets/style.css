@@ -7,10 +7,8 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -45,12 +43,9 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
 }
 
 /**
@@ -58,10 +53,8 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
@@ -78,12 +71,9 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -101,10 +91,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /**
@@ -154,14 +142,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -169,8 +153,7 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input {
-  /* 1 */
+input { /* 1 */
   overflow: visible;
 }
 
@@ -179,8 +162,7 @@ input {
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select {
-  /* 1 */
+select { /* 1 */
   text-transform: none;
 }
 
@@ -229,18 +211,12 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
 /**
@@ -263,10 +239,8 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 
 /**
@@ -282,10 +256,8 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
 /**
@@ -300,10 +272,8 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /* Interactive
@@ -338,15 +308,7 @@ template {
   display: none;
 }
 
-section, main, header, footer, article {
-  display: block;
-}
-
-ol, ul, li {
-  list-style: none;
-}
-
-.footer__info, .navigation__link, .navigation, .hamburger-menu, .card:hover, .our-friends__slider_5:hover, .our-friends__slider_4:hover, .our-friends__arrow_right:hover, .our-friends__arrow_left:hover, .button, .modal__close-icon, .modal, .hamburger, a:hover .logo__description, a:hover .logo__main, .logo {
+.layout-4-column, .footer__info, .navigation__link, .navigation, .hamburger-menu, .card:hover, .our-friends__slider_5:hover, .our-friends__slider_4:hover, .our-friends__arrow_right:hover, .our-friends__arrow_left:hover, .button, .modal__close-icon, .modal, .hamburger, a:hover .logo__description, a:hover .logo__main, .logo {
   transition: all 0.3s ease-out;
 }
 
@@ -1015,12 +977,12 @@ h1.logo__main {
 
 .carousel-item {
   display: flex;
-  column-gap: 9rem;
-  width: 990px;
+  flex-wrap: wrap;
+  column-gap: 4rem;
+  width: 1200px;
 }
 @media (max-width: 1279px) {
   .carousel-item {
-    column-gap: 4rem;
     width: 580px;
   }
 }
@@ -1661,25 +1623,6 @@ a:hover .logo__description {
 }
 @media (max-width: 767px) {
   .carousel-container {
-    width: 270px;
-  }
-}
-
-.carousel-items {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 40px;
-  max-height: 900px;
-  width: 1200px;
-}
-@media (max-width: 1279px) {
-  .carousel-items {
-    width: 580px;
-    max-height: 1365px;
-  }
-}
-@media (max-width: 767px) {
-  .carousel-items {
     width: 270px;
   }
 }

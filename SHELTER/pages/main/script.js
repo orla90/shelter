@@ -1,7 +1,7 @@
-import { data } from '../../scripts/pets.js';
+import data from '../../scripts/pets.js';
 import { CardModal } from '../../scripts/CardModal.js';
 
-const petsNames = [
+const PETS_NAMES = [
   'jennifer',
   'woody',
   'sophia',
@@ -20,13 +20,13 @@ const randomInteger = (min, max) => {
 const randomIntegerArr = (countNum) => {
   let outArray = [];
   while (outArray.length < countNum) {
-    var rand = randomInteger(0, petsNames.length - 1);
+    var rand = randomInteger(0, PETS_NAMES.length - 1);
     if (outArray.indexOf(rand) === -1) outArray.push(rand);
   }
   return outArray;
 };
 
-let randomNumbersArray = randomIntegerArr(petsNames.length);
+let randomNumbersArray = randomIntegerArr(PETS_NAMES.length);
 
 window.onload = function () {
   if (data) {
@@ -75,7 +75,7 @@ const cardListGenerate = () => {
     let randomNum2 = randomNumbersArray[2];
 
     if (randomNumbersArray.length < 6) {
-      randomNumbersArray = randomIntegerArr(petsNames.length);
+      randomNumbersArray = randomIntegerArr(PETS_NAMES.length);
       if (randomNumbersArray.includes(randomNum0)) {
         randomNumbersArray.splice(randomNumbersArray.indexOf(randomNum0), 1);
       }
@@ -93,7 +93,7 @@ const cardListGenerate = () => {
     let randomNum1 = randomNumbersArray[1];
 
     if (randomNumbersArray.length < 6) {
-      randomNumbersArray = randomIntegerArr(petsNames.length);
+      randomNumbersArray = randomIntegerArr(PETS_NAMES.length);
       if (randomNumbersArray.includes(randomNum0)) {
         randomNumbersArray.splice(randomNumbersArray.indexOf(randomNum0), 1);
       }
@@ -107,7 +107,7 @@ const cardListGenerate = () => {
     let randomNum0 = randomNumbersArray[0];
 
     if (randomNumbersArray.length < 6) {
-      randomNumbersArray = randomIntegerArr(petsNames.length);
+      randomNumbersArray = randomIntegerArr(PETS_NAMES.length);
       if (randomNumbersArray.includes(randomNum0)) {
         randomNumbersArray.splice(randomNumbersArray.indexOf(randomNum0), 1);
       }
@@ -142,7 +142,7 @@ const renderCardModalWindow = (card) => {
   modal.renderModal();
 };
 
-/* Hamburger */
+/* Handle Hamburger */
 const hamburger = document.querySelectorAll('.hamburger');
 const navLinks = document.querySelectorAll('.navigation__link');
 const hamburgerMenu = document.querySelector('.hamburger-menu');
@@ -199,7 +199,7 @@ BTN_PREV.addEventListener('click', moveLeft);
 BTN_NEXT.addEventListener('click', moveRight);
 
 const makeCardTemplate = (index) => {
-  let petsNameArray = petsNames[index];
+  let petsNameArray = PETS_NAMES[index];
 
   const card = document.createElement('div');
   card.className = 'card';
@@ -260,7 +260,7 @@ TRACK.addEventListener('animationend', (animationEvent) => {
     let randomNum2 = randomNumbersArray[2];
     cardsCount = 3;
     if (randomNumbersArray.length < 6) {
-      randomNumbersArray = randomIntegerArr(petsNames.length);
+      randomNumbersArray = randomIntegerArr(PETS_NAMES.length);
       if (randomNumbersArray.includes(randomNum0)) {
         randomNumbersArray.splice(randomNumbersArray.indexOf(randomNum0), 1);
       }
@@ -278,7 +278,7 @@ TRACK.addEventListener('animationend', (animationEvent) => {
     let randomNum1 = randomNumbersArray[1];
     cardsCount = 2;
     if (randomNumbersArray.length < 6) {
-      randomNumbersArray = randomIntegerArr(petsNames.length);
+      randomNumbersArray = randomIntegerArr(PETS_NAMES.length);
       if (randomNumbersArray.includes(randomNum0)) {
         randomNumbersArray.splice(randomNumbersArray.indexOf(randomNum0), 1);
       }
@@ -292,7 +292,7 @@ TRACK.addEventListener('animationend', (animationEvent) => {
     let randomNum0 = randomNumbersArray[0];
     cardsCount = 1;
     if (randomNumbersArray.length < 6) {
-      randomNumbersArray = randomIntegerArr(petsNames.length);
+      randomNumbersArray = randomIntegerArr(PETS_NAMES.length);
       if (randomNumbersArray.includes(randomNum0)) {
         randomNumbersArray.splice(randomNumbersArray.indexOf(randomNum0), 1);
       }

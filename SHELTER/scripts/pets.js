@@ -1,4 +1,4 @@
-export const data = [
+const data = [
   {
     name: 'Jennifer',
     img: '../../assets/images/pets-jennifer.png',
@@ -96,3 +96,5 @@ export const data = [
     parasites: ['lice', 'fleas'],
   },
 ];
+
+export default data;

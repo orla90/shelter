@@ -308,7 +308,7 @@ template {
   display: none;
 }
 
-.footer__info, .navigation__link, .navigation, .hamburger-menu, .donation__btn, .credit-card, .card:hover, .our-friends__slider_5:hover, .our-friends__slider_4:hover, .our-friends__arrow_right:hover, .our-friends__arrow_left:hover, .button, .modal__close-icon, .modal, .hamburger, a:hover .logo__description, a:hover .logo__main, .logo {
+.layout-4-column, .footer__info, .navigation__link, .navigation, .hamburger-menu, .donation__btn, .credit-card, .card:hover, .our-friends__slider_5:hover, .our-friends__slider_4:hover, .our-friends__arrow_right:hover, .our-friends__arrow_left:hover, .button, .modal__close-icon, .modal, .hamburger, a:hover .logo__description, a:hover .logo__main, .logo {
   transition: all 0.3s ease-out;
 }
 
@@ -1146,12 +1146,12 @@ h1.logo__main {
 
 .carousel-item {
   display: flex;
-  column-gap: 9rem;
-  width: 990px;
+  flex-wrap: wrap;
+  column-gap: 4rem;
+  width: 1200px;
 }
 @media (max-width: 1279px) {
   .carousel-item {
-    column-gap: 4rem;
     width: 580px;
   }
 }

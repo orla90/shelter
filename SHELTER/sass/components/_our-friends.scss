@@ -11,9 +11,9 @@
     width: 580px;
     display: flex;
     column-gap: 4rem;
-  > * {
-    flex-basis: 45%;
-  }
+    > * {
+      flex-basis: 45%;
+    }
   }
   @include media-big-mobile {
     width: 270px;
@@ -45,10 +45,10 @@
 
 .carousel-item {
   display: flex;
-  column-gap: 9rem;
-  width: 990px;
+  flex-wrap: wrap;
+  column-gap: 4rem;
+  width: 1200px;
   @include media-desktop {
-    column-gap: 4rem;
     width: 580px;
   }
   @include media-big-mobile {
@@ -67,7 +67,7 @@
     @extend %transition;
     cursor: pointer;
     background-color: $color-white;
-    >.card__button>button {
+    > .card__button > button {
       background-color: $color-primary-light;
       border: 2px solid $color-primary-light;
     }
@@ -113,22 +113,34 @@
 }
 
 @keyframes move-right {
-  from {left: -990px;}
-  to {left: -1980px;}
+  from {
+    left: -990px;
+  }
+  to {
+    left: -1980px;
+  }
 }
 
 @include media-desktop {
   @keyframes move-right {
-    from {left: -580px;}
-    to {left: -1160px;}
+    from {
+      left: -580px;
     }
+    to {
+      left: -1160px;
+    }
+  }
 }
 
-@include media-big-mobile{
+@include media-big-mobile {
   @keyframes move-right {
-    from {left: -270px;}
-    to {left: -540px;}
+    from {
+      left: -270px;
     }
+    to {
+      left: -540px;
+    }
+  }
 }
 
 .transition-right {
@@ -137,22 +149,34 @@
 }
 
 @keyframes move-left {
-  from {left: -990px;}
-  to {left: 0px;}
+  from {
+    left: -990px;
+  }
+  to {
+    left: 0px;
+  }
 }
 
 @include media-desktop {
   @keyframes move-left {
-    from {left: -580px;}
-    to {left: 0px;}
+    from {
+      left: -580px;
     }
+    to {
+      left: 0px;
+    }
+  }
 }
 
 @include media-big-mobile {
   @keyframes move-left {
-    from {left: -270px;}
-    to {left: 0px;}
+    from {
+      left: -270px;
     }
+    to {
+      left: 0px;
+    }
+  }
 }
 
 .transition-left {
